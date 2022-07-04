@@ -1,0 +1,105 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.navbar{
+    width: 100vw;
+    background-color: black;
+    color: white;
+    height: 50px;
+    margin: auto;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    padding:0 15px;
+    font-family: 'Shizuru', cursive;
+}
+.navbar ul{
+    list-style: none;
+}
+.gameContainer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px ;
+    /* background-color: yellow; */
+    /* position: absolute; */
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    /* position: relative; */
+
+}
+.gameInfo{
+    padding: 34px;
+    font-family: 'Permanent Marker', cursive;
+
+}
+.imageBox img{
+    width: 0;
+    transition: width  1s ease-in-out;
+}
+.box{
+    border: 1px solid black;
+    font-size: 7vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgb(237, 234, 240);
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+#reset{
+    padding:  3px 10px;
+    margin: 15px 15px;
+    background: rgb(237, 234, 240);;
+    border-radius: 5px;
+    cursor: pointer;
+    
+}
+.info{
+    font-size: 25px;
+}
+.line{
+    background-color: black;
+    width: 30vw;
+    height: 3px;
+    /* position: absolute; */
+    display: none;
+}
+@media (max-width:700px){
+    .gameContainer{
+        flex-direction: column;
+        /* width: 100vw; */
+    }
+    .container{
+        margin: auto;
+        grid-template-rows: repeat(3,15vw);
+    grid-template-columns: repeat(3,15vw);
+    }
+    .gameInfo{
+        margin: auto;
+    }
+    .navbar{
+        padding: 0;
+    }
+}
